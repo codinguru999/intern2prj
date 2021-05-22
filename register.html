@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaCart</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        #message {
+            background-color: beige;
+            width: fit-content;
+        }
+
+        .nav {
+            background-color: rgb(177, 137, 43);
+            border-radius: 6px;
+        }
+
+        .nav ul {
+            overflow: auto;
+        }
+
+        .nav li {
+            float: left;
+            list-style: none;
+            margin: 14px 20px;
+        }
+
+        .nav li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+            border: none;
+            background-color: rgb(171, 137, 43);
+        }
+
+        .nav li a:hover {
+            color: red
+        }
+
+        .search {
+            float: right;
+            color: rgb(34, 2, 2);
+            padding: 12px 75px;
+        }
+
+        .nav input {
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 5px 17px;
+            width: 129px;
+            background-color: lightyellow;
+        }
+
+
+
+        .icon h4 {
+            margin: .5rem;
+        }
+
+
+
+        .vc {
+            display: block;
+            width: fit-content;
+            margin: auto;
+            padding: 2rem;
+            border: 2px solid red;
+            border-radius: 2rem;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style=" color: rgb(150, 141, 20) ;">MegaCart</h1>
+    <header class="nav">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <div class="search">
+                    <input type="text" id="search" placeholder="Seach This Site">
+                </div>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="message">
+        <h3>
+            Register:
+        </h3>
+        <p>Register Into MegaCart using your Facebook,Google,Mail,Mobile Number or <br> with Your MegaCart Account</p>
+    </div>
+   <button onclick="disablev()">Vendor</button>
+   <button onclick="disablec()">Customer</button>
+    <div id="main" style="display: flex;">
+        <div class="vc">
+            <h3>Vendor Register</h3>
+            <form action="create.html">
+                <div class="icon">
+                    <label for="vname">Name:</label><br>
+                    <input type="text" id="vname" placeholder="Enter your Name" required>
+
+
+
+                </div>
+                <div class="icon">
+                    <label for="mobile2">Mobile Number</label><br>
+                    <input type="number" name="" id="mobile2" placeholder="Enter your Mobile" required>
+
+
+                </div>
+                <div class="icon">
+                    <label for="email2">Email Address:
+                    </label><br>
+                    <input type="email" name="" id="email2" placeholder="Enter Your Email" required>
+
+
+                </div>
+                <div class="icon">
+                    <label for="product">Product Types:</label><br>
+                    <textarea name="message" id="product" cols="30" rows="10"
+                        placeholder="Enter your Product types like smartphone etc.and seperate them via space if more than 1" required></textarea>
+
+
+
+                </div>
+                <div class="icon">
+                    <label for="pin1">Number of Products</label><br>
+                    <input type="number" name="" id="pin1" required>
+                </div>
+                <div class="icon">
+                    <input type="submit" value="Submit" id="s1">
+                </div>
+            </form>
+
+
+        </div>
+
+
+        <div class="vc">
+            <h3>Customer Register</h3>
+            <form action="create.html">
+                <div class="icon">
+                    <label for="cname">Name:</label><br>
+                    <input type="text" id="cname" placeholder="Enter your Name" required>
+
+
+
+                </div>
+                <div class="icon">
+                    <label for="mobile1">Mobile Number</label><br>
+                    <input type="number" name="" id="mobile1" placeholder="Enter your Mobile" required>
+
+
+                </div>
+                <div class="icon">
+                    <label for="email1">Email Address:
+                    </label><br>
+                    <input type="email" name="" id="email1" placeholder="Enter Your Email" required>
+
+
+                </div>
+                <div class="icon">
+                    <label for="address">Product Types:</label><br>
+                    <textarea name="message" id="address" cols="30" rows="10"
+                        placeholder="Enter your Address" required></textarea>
+
+
+
+                </div>
+                <div class="icon">
+                    <label for="pin1">PinCode</label><br>
+                    <input type="number" name="" id="pin2" required>
+                </div>
+
+                <div class="icon">
+                    <input type="submit" value="Submit" id="s2">
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+</body>
+<footer>
+    <p style="text-align: center; bottom: 0rem;">All Rights Reserved CopyRight @MegaCart.in</p>
+</footer>
+<script>
+    function disablev()
+    {
+        document.getElementById("vname").disabled = false;
+        document.getElementById("mobile2").disabled = false;
+        document.getElementById("email2").disabled = false;
+        document.getElementById("product").disabled = false;
+        document.getElementById("pin1").disabled = false;
+        document.getElementById("s1").disabled = false;
+        
+        document.getElementById("cname").disabled = true;
+        document.getElementById("mobile1").disabled = true;
+        document.getElementById("email1").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("pin2").disabled = true;
+        document.getElementById("s2").disabled = true;
+       
+        
+    }
+    function disablec()
+    {
+        document.getElementById("cname").disabled = false;
+        document.getElementById("mobile1").disabled = false;
+        document.getElementById("email1").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("pin2").disabled = false;
+        document.getElementById("s2").disabled = false;
+        
+
+        document.getElementById("vname").disabled = true;
+        document.getElementById("mobile2").disabled = true;
+        document.getElementById("email2").disabled = true;
+        document.getElementById("product").disabled = true;
+        document.getElementById("pin1").disabled = true;
+        document.getElementById("s1").disabled = true;
+    }
+</script>
+</html>
