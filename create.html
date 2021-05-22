@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaCart</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+         .nav {
+            background-color: rgb(177, 137, 43);
+            border-radius: 6px;
+        }
+
+        .nav ul {
+            overflow: auto;
+        }
+
+        .nav li {
+            float: left;
+            list-style: none;
+            margin: 14px 20px;
+        }
+
+        .nav li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+            border: none;
+            background-color: rgb(171, 137, 43);
+        }
+
+        .nav li a:hover {
+            color: red
+        }
+
+        .search {
+            float: right;
+            color: rgb(34, 2, 2);
+            padding: 12px 75px;
+        }
+
+        .nav input {
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 5px 17px;
+            width: 129px;
+            background-color: lightyellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 style=" color: rgb(150, 141, 20) ;">MegaCart</h1>
+    <header class="nav">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <div class="search">
+                    <input type="text" id="search" placeholder="Seach This Site">
+                </div>
+            </ul>
+        </nav>
+
+    </header>
+    <h3> Create PassWord</h3>  
+  <div style="display: flex; width: fit-content; margin: auto">
+    <form onsubmit ="return validateForm()">  
+  
+        <!-- Enter first name -->  
+        <td> Mobile Number* </td>  
+        <input type = "number" id = "fname" value = "">   
+        <span id = "blankMsg" style="color:red"> </span> <br><br>  
+          
+         
+          
+        <!-- Create a new password -->  
+        <td> Create Password* </td>  
+        <input type = "password" id = "pswd1" value = "">   
+        <span id = "message1" style="color:red"> </span> <br><br>  
+          
+        <!?Enter confirm password -->  
+        <td> Confirm Password* </td>  
+        <input type = "password" id = "pswd2" value = "">   
+        <span id = "message2" style="color:red"> </span> <br><br>  
+          
+        <!-- Click to verify valid password -->  
+        <input type = "submit" value = "Submit">  
+        <button type = "reset" value = "Reset" >Reset</button>  
+          
+        
+        </form>  
+  </div>
+
+</body>
+<script>  
+    function validateForm() {  
+        //collect form data in JavaScript variables  
+        var pw1 = document.getElementById("pswd1").value;  
+        var pw2 = document.getElementById("pswd2").value;  
+        var name1 = document.getElementById("fname").value;  
+         
+          
+        //check empty first name field  
+        if(name1 == "") {  
+          document.getElementById("blankMsg").innerHTML = "**Fill ypur mobile number";  
+          return false;  
+        }  
+          
+      if(name1.length!=10)
+      {
+          document.getElementById("blankMsg").innerHTML="Enter a 10 digit number";
+          return false;
+      }
+      
+      
+        
+        //check empty password field  
+        if(pw1 == "") {  
+          document.getElementById("message1").innerHTML = "**Fill the password please!";  
+          return false;  
+        }  
+        
+        //check empty confirm password field  
+        if(pw2 == "") {  
+          document.getElementById("message2").innerHTML = "**Enter the password please!";  
+          return false;  
+        }   
+         
+        //minimum password length validation  
+        if(pw1.length < 8) {  
+          document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";  
+          return false;  
+        }  
+      
+        //maximum length of password validation  
+        if(pw1.length > 15) {  
+          document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
+          return false;  
+        }  
+        
+        if(pw1 != pw2) {  
+          document.getElementById("message2").innerHTML = "**Passwords are not same";  
+          return false;  
+        } else {  
+          alert ("Your password created successfully");  
+          
+        }  
+     }  
+    </script> 
+</html>
