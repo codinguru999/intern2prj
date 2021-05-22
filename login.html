@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaCart</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        #message {
+            background-color: beige;
+            width: fit-content;
+        }
+
+        .nav {
+            background-color: rgb(177, 137, 43);
+            border-radius: 6px;
+        }
+
+        .nav ul {
+            overflow: auto;
+        }
+
+        .nav li {
+            float: left;
+            list-style: none;
+            margin: 14px 20px;
+        }
+
+        .nav li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+            border: none;
+            background-color: rgb(171, 137, 43);
+        }
+
+        .nav li a:hover {
+            color: red
+        }
+
+        .search {
+            float: right;
+            color: rgb(34, 2, 2);
+            padding: 12px 75px;
+        }
+
+        .nav input {
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 5px 17px;
+            width: 129px;
+            background-color: lightyellow;
+        }
+
+        .icon {
+            display: flex;
+        }
+
+        .icon h4 {
+            margin: .5rem;
+        }
+
+        .icon img {
+            height: 1.7rem;
+            width: 1.7rem;
+        }
+
+        .vc {
+            display: block;
+            width: fit-content;
+            margin: auto;
+            padding: 2rem;
+            border: 2px solid red;
+            border-radius: 2rem;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style=" color: rgb(150, 141, 20) ;">MegaCart</h1>
+    <header class="nav">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <div class="search">
+                    <input type="text" id="search" placeholder="Seach This Site">
+                </div>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="message">
+        <h3>
+            Login:
+        </h3>
+        <p>Login Into MegaCart using your Facebook,Google,Mail,Mobile Number or <br> with Your MegaCart Account</p>
+    </div>
+    <div id="main" style="display: flex;">
+        <div class="vc">
+            <h3>Vendor login</h3>
+            <div class="icon">
+
+                <img src="icon _fb.png" alt="">
+                <h4><a href="">Continue Using FaceBook</a></h4>
+
+            </div>
+            <div class="icon">
+
+                <img src="icon _google.png" alt="">
+                <h4><a href="">Continue with Google</a> </h4>
+
+            </div>
+            <div class="icon">
+
+                <img src="icon _mail.png" alt="">
+                <h4><a href=""> Continue With Mail</a></h4>
+
+            </div>
+            <div class="icon">
+
+                <img src="icon _mobile.png" alt="">
+                <h4><a href="">Continue With Your Mobile Number</a> </h4>
+
+            </div>
+            <div id="form">
+                <div>
+                    <label for="user">UserId:</label><br>
+                    <input type="text" name="" id="user" placeholder="Enter Your User Id">
+                </div>
+                <div>
+                    <label for="password">PassWord:</label><br>
+                    <input type="password" name="" id="password" placeholder="Enter Your PassWord">
+
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <h5>Not a MegaCart Member?<a href="register.html">Register</a></h5>
+            </div>
+        </div>
+        <div class="vc">
+            <h3>Customer login</h3>
+            <div class="icon">
+
+                <img src="icon _fb.png" alt="">
+                <h4><a href=""> Continue Using FaceBook</a></h4>
+
+            </div>
+            <div class="icon">
+
+                <img src="icon _google.png" alt="">
+                <h4><a href="">Continue with Google</a> </h4>
+
+            </div>
+            <div class="icon">
+
+                <img src="icon _mail.png" alt="">
+                <h4><a href="">Continue With Mail</a> </h4>
+
+            </div>
+            <div class="icon">
+
+                <img src="icon _mobile.png" alt="">
+                <h4><a href="">Continue With Your Mobile Number</a> </h4>
+
+            </div>
+            <div id="form">
+                <div>
+                    <label for="user1">UserId:</label><br>
+                    <input type="text" name="" id="user1" placeholder="Enter Your User Id">
+                </div>
+                <div>
+                    <label for="password1">PassWord:</label><br>
+                    <input type="password" name="" id="password1" placeholder="Enter Your PassWord">
+
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <h5>Not a MegaCart Member?<a href="register.html">Register</a></h5>
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <p style="text-align: center;">All Rights Reserved CopyRight @MegaCart.in</p>
+</footer>
+
+</html>
